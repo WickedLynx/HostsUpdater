@@ -1,0 +1,9 @@
+#!/bin/sh                                                                       
+
+killall hostsUpdater || true
+
+chmod +x /usr/bin/hostsUpdater
+
+chown 0:0 /Library/LaunchDaemons/com.laughing-buddha-software.hostsUpdater.plist
+
+launchctl load -w /Library/LaunchDaemons/com.laughing-buddha-software.hostsUpdater.plist
