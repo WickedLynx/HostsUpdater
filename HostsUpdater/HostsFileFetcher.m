@@ -43,7 +43,7 @@ NSTimeInterval const HUPUpdateInterval = 6 * 3600; // 6 hours
                 }
                 
                 NSString *modifiedHosts = [entries componentsJoinedByString:[NSString stringWithFormat:@"\n"]];
-                NSString *defaultMacHosts = [NSString stringWithFormat:@"127.0.0.1       localhost\r255.255.255.255 broadcasthost\r::1             localhost\rfe80::1%%lo0     localhost\r184.72.115.86    search.yahoo.com\r"];
+                NSString *defaultMacHosts = [NSString stringWithFormat:@"127.0.0.1       localhost\n255.255.255.255 broadcasthost\n::1             localhost\nfe80::1%%lo0     localhost\n184.72.115.86    search.yahoo.com\n"];
                 modifiedHosts = [defaultMacHosts stringByAppendingString:modifiedHosts];
                 modifiedHosts = [modifiedHosts stringByReplacingOccurrencesOfString:@"\n\n" withString:@"\n"];
                 [modifiedHosts writeToFile:HUPHostsFilePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
