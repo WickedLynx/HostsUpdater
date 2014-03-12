@@ -29,7 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5963710318CF5C4400F00BD6 /* HostsUpdater */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HostsUpdater; sourceTree = BUILT_PRODUCTS_DIR; };
+		5963710318CF5C4400F00BD6 /* hostsUpdater */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hostsUpdater; sourceTree = BUILT_PRODUCTS_DIR; };
 		5963710618CF5C4400F00BD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5963710918CF5C4400F00BD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5963710C18CF5C4400F00BD6 /* HostsUpdater-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HostsUpdater-Prefix.pch"; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		5963710418CF5C4400F00BD6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5963710318CF5C4400F00BD6 /* HostsUpdater */,
+				5963710318CF5C4400F00BD6 /* hostsUpdater */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 			);
 			name = hostsUpdater;
 			productName = HostsUpdater;
-			productReference = 5963710318CF5C4400F00BD6 /* HostsUpdater */;
+			productReference = 5963710318CF5C4400F00BD6 /* hostsUpdater */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -241,6 +241,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HostsUpdater/HostsUpdater-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,6 +251,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HostsUpdater/HostsUpdater-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -273,6 +275,7 @@
 				5963711318CF5C4400F00BD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

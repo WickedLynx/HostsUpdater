@@ -19,14 +19,6 @@ NSTimeInterval const HUPUpdateInterval = 6 * 3600; // 6 hours
     Reachability *_reachibility;
 }
 
-- (void)didWakeFromSleep:(NSNotification *)aNotification {
-    double delayInSeconds = 60.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [self checkForUpdatedFile:nil];
-    });
-}
-
 - (void)updateHostsFile {
     if ([[NSDate date] timeIntervalSinceDate:_lastUpdatedDate] > HUPUpdateInterval - 10) {
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:HUPRemoteHostsFile]];
@@ -54,7 +46,7 @@ NSTimeInterval const HUPUpdateInterval = 6 * 3600; // 6 hours
                 NSString *defaultMacHosts = [NSString stringWithFormat:@"127.0.0.1       localhost\r255.255.255.255 broadcasthost\r::1             localhost\rfe80::1%%lo0     localhost\r184.72.115.86    search.yahoo.com\r"];
                 modifiedHosts = [defaultMacHosts stringByAppendingString:modifiedHosts];
                 modifiedHosts = [modifiedHosts stringByReplacingOccurrencesOfString:@"\n\n" withString:@"\n"];
-                [modifiedHosts writeToFile:@"/etc/hosts" atomically:YES encoding:NSUTF8StringEncoding error:nil];
+                [modifiedHosts writeToFile:HUPHostsFilePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
             }
 
             
@@ -79,7 +71,6 @@ NSTimeInterval const HUPUpdateInterval = 6 * 3600; // 6 hours
         _reachibility = [Reachability reachabilityWithHostname:@"http://hosts-file.net"];
         __weak typeof(self) wSelf = self;
         [_reachibility setReachableBlock:^(Reachability*reach) {
-            NSLog(@"%s", __PRETTY_FUNCTION__);
             [wSelf updateHostsFile];
         }];
         [_reachibility startNotifier];
