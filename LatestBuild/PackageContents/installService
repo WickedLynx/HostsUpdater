@@ -1,0 +1,4 @@
+#!/bin/sh
+
+unzip /Library/Services/BlockThisDomain.zip -d /Library/Services
+rm /Library/Services/BlockThisDomain.zip

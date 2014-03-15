@@ -1,8 +1,11 @@
 #!/bin/sh                                                                       
 
 killall hostsUpdater || true
+killall hostsUpdaterHelper || true
 
 chmod +x /usr/bin/hostsUpdater
+
+chmod +x /usr/bin/hostsUpdaterHelper
 
 chown 0:0 /Library/LaunchDaemons/com.laughing-buddha-software.hostsUpdater.plist
 

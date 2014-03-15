@@ -1,0 +1,10 @@
+#!/bin/sh                                                                       
+launchctl unload -w /Library/LaunchDaemons/com.laughing-buddha-software.hostsUpdater.plist
+
+killall hostsUpdater || true
+killall hostsUpdaterHelper || true
+
+rm /usr/bin/hostsUpdater
+rm /usr/bin/hostsUpdaterHelper
+rm /Library/LaunchDaemons/com.laughing-buddha-software.hostsUpdater.plist
+rm -rf /Library/Services/Block\ this\ domain.workflow

@@ -2,7 +2,7 @@
 //  main.m
 //  HostsUpdater
 //
-//  Created by Harshad Dange on 11/03/2014.
+//  Created by Harshad on 11/03/2014.
 //  Copyright (c) 2014 Laughing Buddha Software. All rights reserved.
 //
 

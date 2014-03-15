@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590C41B718D370780073F160 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5963710618CF5C4400F00BD6 /* Foundation.framework */; };
+		590C41BA18D370790073F160 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C41B918D370790073F160 /* main.m */; };
+		590C41BE18D370790073F160 /* hostsUpdaterHelper.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 590C41BD18D370790073F160 /* hostsUpdaterHelper.1 */; };
+		590C41C418D3878D0073F160 /* HUPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C41C318D3878D0073F160 /* HUPConstants.m */; };
+		590C41C518D3878D0073F160 /* HUPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C41C318D3878D0073F160 /* HUPConstants.m */; };
 		5963710718CF5C4400F00BD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5963710618CF5C4400F00BD6 /* Foundation.framework */; };
 		5963710A18CF5C4400F00BD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5963710918CF5C4400F00BD6 /* main.m */; };
 		5963710E18CF5C4400F00BD6 /* HostsUpdater.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5963710D18CF5C4400F00BD6 /* HostsUpdater.1 */; };
@@ -16,6 +21,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		590C41B418D370780073F160 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				590C41BE18D370790073F160 /* hostsUpdaterHelper.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		5963710118CF5C4400F00BD6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,6 +44,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		590C41B618D370780073F160 /* hostsUpdaterHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hostsUpdaterHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		590C41B918D370790073F160 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		590C41BC18D370790073F160 /* hostsUpdaterHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hostsUpdaterHelper-Prefix.pch"; sourceTree = "<group>"; };
+		590C41BD18D370790073F160 /* hostsUpdaterHelper.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = hostsUpdaterHelper.1; sourceTree = "<group>"; };
+		590C41C218D3878D0073F160 /* HUPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUPConstants.h; sourceTree = "<group>"; };
+		590C41C318D3878D0073F160 /* HUPConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUPConstants.m; sourceTree = "<group>"; };
 		5963710318CF5C4400F00BD6 /* hostsUpdater */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hostsUpdater; sourceTree = BUILT_PRODUCTS_DIR; };
 		5963710618CF5C4400F00BD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5963710918CF5C4400F00BD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -41,10 +62,17 @@
 		5963711A18CF85AB00F00BD6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		5963711B18CF85AB00F00BD6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		5963711D18CF899400F00BD6 /* com.laughing-buddha-software.hostsUpdater.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.laughing-buddha-software.hostsUpdater.plist"; sourceTree = "<group>"; };
-		5963711E18CF8E8000F00BD6 /* postinst */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = postinst; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		590C41B318D370780073F160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				590C41B718D370780073F160 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5963710018CF5C4400F00BD6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,10 +85,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		590C41B818D370790073F160 /* hostsUpdaterHelper */ = {
+			isa = PBXGroup;
+			children = (
+				590C41B918D370790073F160 /* main.m */,
+				590C41BD18D370790073F160 /* hostsUpdaterHelper.1 */,
+				590C41BB18D370790073F160 /* Supporting Files */,
+			);
+			path = hostsUpdaterHelper;
+			sourceTree = "<group>";
+		};
+		590C41BB18D370790073F160 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				590C41BC18D370790073F160 /* hostsUpdaterHelper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		596370FA18CF5C4400F00BD6 = {
 			isa = PBXGroup;
 			children = (
 				5963710818CF5C4400F00BD6 /* HostsUpdater */,
+				590C41B818D370790073F160 /* hostsUpdaterHelper */,
 				5963710518CF5C4400F00BD6 /* Frameworks */,
 				5963710418CF5C4400F00BD6 /* Products */,
 			);
@@ -70,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				5963710318CF5C4400F00BD6 /* hostsUpdater */,
+				590C41B618D370780073F160 /* hostsUpdaterHelper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,7 +138,8 @@
 				5963711B18CF85AB00F00BD6 /* Reachability.m */,
 				5963711518CF5EED00F00BD6 /* HostsFileFetcher.h */,
 				5963711618CF5EED00F00BD6 /* HostsFileFetcher.m */,
-				5963711E18CF8E8000F00BD6 /* postinst */,
+				590C41C218D3878D0073F160 /* HUPConstants.h */,
+				590C41C318D3878D0073F160 /* HUPConstants.m */,
 				5963710918CF5C4400F00BD6 /* main.m */,
 				5963711418CF5DCB00F00BD6 /* DefaultMacHosts */,
 				5963710D18CF5C4400F00BD6 /* HostsUpdater.1 */,
@@ -111,6 +160,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		590C41B518D370780073F160 /* hostsUpdaterHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 590C41C118D370790073F160 /* Build configuration list for PBXNativeTarget "hostsUpdaterHelper" */;
+			buildPhases = (
+				590C41B218D370780073F160 /* Sources */,
+				590C41B318D370780073F160 /* Frameworks */,
+				590C41B418D370780073F160 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hostsUpdaterHelper;
+			productName = hostsUpdaterHelper;
+			productReference = 590C41B618D370780073F160 /* hostsUpdaterHelper */;
+			productType = "com.apple.product-type.tool";
+		};
 		5963710218CF5C4400F00BD6 /* hostsUpdater */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5963711118CF5C4400F00BD6 /* Build configuration list for PBXNativeTarget "hostsUpdater" */;
@@ -150,11 +216,21 @@
 			projectRoot = "";
 			targets = (
 				5963710218CF5C4400F00BD6 /* hostsUpdater */,
+				590C41B518D370780073F160 /* hostsUpdaterHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		590C41B218D370780073F160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				590C41BA18D370790073F160 /* main.m in Sources */,
+				590C41C518D3878D0073F160 /* HUPConstants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		596370FF18CF5C4400F00BD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,12 +238,35 @@
 				5963710A18CF5C4400F00BD6 /* main.m in Sources */,
 				5963711C18CF85AB00F00BD6 /* Reachability.m in Sources */,
 				5963711718CF5EED00F00BD6 /* HostsFileFetcher.m in Sources */,
+				590C41C418D3878D0073F160 /* HUPConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		590C41BF18D370790073F160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hostsUpdaterHelper/hostsUpdaterHelper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		590C41C018D370790073F160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hostsUpdaterHelper/hostsUpdaterHelper-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		5963710F18CF5C4400F00BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -259,6 +358,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		590C41C118D370790073F160 /* Build configuration list for PBXNativeTarget "hostsUpdaterHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				590C41BF18D370790073F160 /* Debug */,
+				590C41C018D370790073F160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		596370FE18CF5C4400F00BD6 /* Build configuration list for PBXProject "HostsUpdater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
